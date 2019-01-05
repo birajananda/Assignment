@@ -111,16 +111,17 @@ public class DistinctNumberPair {
 			final int prime = 31;
 			int result = 1;
 			result = (int) (prime * result + Math.sqrt(sumPart1 + sumPart2));
-			// result = prime * result + b;
-			return result;
+		   return result;
 		}
 
 		@Override
 		public boolean equals(Object obj) {
-			if (this == obj)
+			if (this == obj){
 				return true;
-			if (obj == null || getClass() != obj.getClass())
+			}
+			if (obj == null || getClass() != obj.getClass()){
 				return false;
+			}
 
 			NumberPair tempNumberPair = (NumberPair) obj;
 			if ((sumPart1 == tempNumberPair.sumPart1) && (sumPart2 == tempNumberPair.sumPart2)) {
